@@ -65,15 +65,15 @@ say "Hello, World!" # 输出内容
 
 ### 安装步骤
 1. 克隆仓库：
-   git clone https://github.com/yourusername/hercode-interpreter.git
+   git clone https://github.com/playboy-Mr-Li/HerCode.git
 2. cd hercode-interpreter
 3. 构建项目：
    go build -o hercode
 4. 运行 HerCode 脚本
    - 运行示例脚本
-     ./hercode examples/hello.her
+     ./hercode -f examples/hello.hc
    - 运行自定义脚本
-     ./hercode path/to/your/script.her
+     ./hercode -f path/to/your/script.hc
 
 ## 示例脚本
 
@@ -89,44 +89,6 @@ greet("Her World")
 end
 ```
 
-### math_demo.her
-```hercode
-数学运算示例
-function factorial n:
-if n == 0:
-return 1
-else:
-return n * factorial(n - 1)
-endif
-end
-
-start:
-say "5的阶乘: " + factorial(5)
-say "平方根(25): " + sqrt(25)
-end
-```
-
-### grade.her
-```hercode
-成绩评级示例
-function grade score:
-if score >= 90:
-say "优秀!"
-else:
-if score >= 80:
-say "良好!"
-else:
-say "加油!"
-endif
-endif
-end
-
-start:
-grade(95)
-grade(85)
-grade(75)
-end
-```
 
 ## 内置函数
 
@@ -167,5 +129,10 @@ HerCode 语言设计灵感来自对女性编程学习者的研究，旨在创造
 - 明确的块结构：使用 end 明确标记代码块结束
 - 友好的错误提示：提供详细的错误解释和修复建议
 - 鼓励性命名：如 you_can_do_this 等鼓励性函数名
+
+## TODO
+
+[ ] 函数返回值实现还未成功
+[ ] if while 不支持嵌套
 
 我们希望通过 HerCode 语言，让更多女性学习者能够轻松入门编程，享受编程的乐趣！
