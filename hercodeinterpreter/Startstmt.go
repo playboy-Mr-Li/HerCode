@@ -1,0 +1,3 @@
+package hercodeinterpreter
+
+type StartStmt HerCodeFunction
